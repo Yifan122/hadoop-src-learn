@@ -162,6 +162,10 @@ class BlockPoolManager {
   }
   /**
    * 本方法分成5个步骤来完成对命名空间的新增、刷新、删除、以及对新增命名空间添加BPOfferService线程，并启动所有线程
+   * 1. datanode的握手
+   * 2. datanode的心跳
+   * 3. datanode的注册
+   * 4. datanode的数据块汇报
    * */
   private void doRefreshNamenodes(
       Map<String, Map<String, InetSocketAddress>> addrMap) throws IOException {

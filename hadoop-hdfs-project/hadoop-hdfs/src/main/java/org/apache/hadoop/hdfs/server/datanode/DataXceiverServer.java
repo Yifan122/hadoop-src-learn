@@ -171,9 +171,11 @@ class DataXceiverServer implements Runnable {
     // 带宽取参数dfs.datanode.balance.bandwidthPerSec，参数未配置默认为1024*1024
     // 最大线程数取参数dfs.datanode.balance.max.concurrent.moves，参数未配置默认为5
     //TODO spark on yarn 面试题
+    // 6 台机器， 16核CPU， 64 G 内存
     this.balanceThrottler = new BlockBalanceThrottler(
         conf.getLong(DFSConfigKeys.DFS_DATANODE_BALANCE_BANDWIDTHPERSEC_KEY,
             DFSConfigKeys.DFS_DATANODE_BALANCE_BANDWIDTHPERSEC_DEFAULT),
+        // TODO 并行拷贝数 --》 5
         conf.getInt(DFSConfigKeys.DFS_DATANODE_BALANCE_MAX_NUM_CONCURRENT_MOVES_KEY,
             DFSConfigKeys.DFS_DATANODE_BALANCE_MAX_NUM_CONCURRENT_MOVES_DEFAULT));
   }

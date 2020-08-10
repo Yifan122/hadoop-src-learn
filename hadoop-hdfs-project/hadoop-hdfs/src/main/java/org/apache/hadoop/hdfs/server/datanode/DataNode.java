@@ -962,6 +962,7 @@ public class DataNode extends ReconfigurableBase
           DataNode.getStreamingAddr(conf));
     }
     // 设置数据接收缓冲区大小，默认为128KB
+    // TODO 缓冲区大小调大可以优化上传速度
     tcpPeerServer.setReceiveBufferSize(HdfsConstants.DEFAULT_DATA_SOCKET_SIZE);//128K
     // 通过tcpPeerServer获取Socket地址InetSocketAddress，赋值给DataNode成员变量streamingAddr
     streamingAddr = tcpPeerServer.getStreamingAddr();//50010
