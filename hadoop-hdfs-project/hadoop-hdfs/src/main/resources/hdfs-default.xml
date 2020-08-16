@@ -32,6 +32,10 @@
   <value>1</value>
   <description>version of this configuration file</description>
 </property>
+  <property>
+    <name>dfs.namenode.buffer.value</name>
+    <value>5242880</value>
+  </property>
 
 <property>
   <name>dfs.namenode.rpc-address</name>

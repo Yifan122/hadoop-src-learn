@@ -795,10 +795,10 @@ public class DFSConfigKeys extends CommonConfigurationKeys {
 
 
   //TODO 添加buffer大小
-  public static final String DFS_NAMENODE_BUFFER_VALUE_KEY = "kaikeba.dfs.namenode.buffer.value" ;
+  public static final String DFS_NAMENODE_BUFFER_VALUE_KEY = "dfs.namenode.buffer.value" ;
   public static final int DFS_NAMENODE_BUFFER_DEFAULT_VALUE = 10 * 512 * 1024 ;//5M
 
   //TODO 添加GC的时间
-  public static final String DFS_NAMENODE_GC_VALUE_KEY = "kaikeba.dfs.namenode.gc.value.threadhold";
+  public static final String DFS_NAMENODE_GC_VALUE_KEY = "dfs.namenode.gc.value.threadhold";
   public static final Long DFS_NAMENODE_GC_DEFAULT_VALUE = 3 * 1000L ;//3s
 }

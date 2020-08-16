@@ -267,7 +267,7 @@ public class LeaseManager {
    *************************************************************/
   /**一个租约由一个holder（客户端名），lastUpdate（上次更新时间）和paths（该客户端操作的文件集合）构成 */
   //每条租约记录信息，只能被单一的客户端占有
-  class Lease implements Comparable<Lease> {
+  class  Lease implements Comparable<Lease> {
     private final String holder;//租约信息客户持有者
     private long lastUpdate;//租约最后更新时间
     //此租约内所打开的文件，维护一个客户端打开的所有文件

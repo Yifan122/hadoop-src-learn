@@ -90,7 +90,6 @@ public class FileJournalManager implements JournalManager {
     this.outputBufferCapacity = conf.getInt(
             DFSConfigKeys.DFS_NAMENODE_BUFFER_VALUE_KEY ,
             DFSConfigKeys.DFS_NAMENODE_BUFFER_DEFAULT_VALUE);
-
   }
 
   @Override 
